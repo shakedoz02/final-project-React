@@ -1,0 +1,114 @@
+/* TaskFilters Component Styles */
+
+.task-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+  margin-top: 1.5rem;
+  border-top: 2px solid #e5e7eb;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Counter */
+.task-filters-counter {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.task-count {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.task-count-label {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Filter Buttons */
+.task-filters-buttons {
+  display: flex;
+  gap: 0.5rem;
+  background-color: #f3f4f6;
+  padding: 0.25rem;
+  border-radius: 8px;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6b7280;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.filter-btn:hover {
+  color: #374151;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.filter-btn:active {
+  transform: scale(0.98);
+}
+
+.filter-btn-active {
+  color: #667eea;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+}
+
+.filter-btn-active:hover {
+  color: #4f46e5;
+  background-color: #ffffff;
+}
+
+/* Focus states for accessibility */
+.filter-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+.filter-btn:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+.filter-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .task-filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-filters-counter {
+    width: 100%;
+  }
+
+  .task-filters-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .filter-btn {
+    flex: 1;
+  }
+}

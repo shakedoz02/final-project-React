@@ -49,11 +49,11 @@
 - [x] Apply visual styling for completed tasks (line-through/dimmed)
 
 ### 3.4 TaskFilters Component
-- [ ] Create `TaskFilters.jsx` component
-- [ ] Render filter buttons (All, Active, Completed)
-- [ ] Highlight active filter visually (bold/background)
-- [ ] Display active tasks counter ("X tasks remaining")
-- [ ] Implement `onSetFilter(filter)` callback
+- [x] Create `TaskFilters.jsx` component
+- [x] Render filter buttons (All, Active, Completed)
+- [x] Highlight active filter visually (bold/background)
+- [x] Display active tasks counter ("X tasks remaining")
+- [x] Implement `onSetFilter(filter)` callback
 
 ## 4. App Integration
 - [x] Wire up CRUD operations in `App.jsx`
@@ -68,27 +68,27 @@
 - [x] Ensure localStorage sync on all state changes
 
 ## 5. Styling & UI/UX
-- [ ] Create global styles in `App.css` or `index.css`
-- [ ] Style TaskInput component
-  - [ ] Input field styling
-  - [ ] Submit button styling
-  - [ ] Validation error feedback
-- [ ] Style TaskList component
-  - [ ] List container styling
-  - [ ] Empty state message styling
-- [ ] Style TaskItem component
-  - [ ] Task text display
-  - [ ] Completed state visual (line-through/dimmed)
-  - [ ] Edit mode input styling
-  - [ ] Action buttons (edit, delete, toggle)
-- [ ] Style TaskFilters component
-  - [ ] Filter buttons layout
-  - [ ] Active filter highlight styling
-  - [ ] Counter display styling
-- [ ] Add accessibility features
-  - [ ] Proper labels for form inputs
-  - [ ] Focus states for interactive elements
-  - [ ] Keyboard navigation support
+- [x] Create global styles in `App.css` or `index.css`
+- [x] Style TaskInput component
+  - [x] Input field styling
+  - [x] Submit button styling
+  - [x] Validation error feedback
+- [x] Style TaskList component
+  - [x] List container styling
+  - [x] Empty state message styling
+- [x] Style TaskItem component
+  - [x] Task text display
+  - [x] Completed state visual (line-through/dimmed)
+  - [x] Edit mode input styling
+  - [x] Action buttons (edit, delete, toggle)
+- [x] Style TaskFilters component
+  - [x] Filter buttons layout
+  - [x] Active filter highlight styling
+  - [x] Counter display styling
+- [x] Add accessibility features
+  - [x] Proper labels for form inputs
+  - [x] Focus states for interactive elements
+  - [x] Keyboard navigation support
 
 ## 6. ID Generation
 - [x] Implement reliable unique ID generation

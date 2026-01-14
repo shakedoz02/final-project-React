@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import TaskInput from './components/TaskInput'
 import TaskList from './components/TaskList'
+import TaskFilters from './components/TaskFilters'
 import './App.css'
 
 /**
@@ -168,10 +169,6 @@ function App() {
         {/* Task Input Component */}
         <TaskInput onAddTask={addTask} />
 
-        {/* Debug Info */}
-        <div className="debug-info">
-          <p>Tasks: {tasks.length} | Active: {activeCount} | Filter: {filter} | Visible: {visibleTasks.length}</p>
-        </div>
 
         {/* Task List Component */}
         <TaskList
@@ -181,8 +178,12 @@ function App() {
           onEdit={editTask}
         />
 
-        {/* Component to be integrated next */}
-        {/* <TaskFilters filter={filter} activeCount={activeCount} onSetFilter={setFilter} /> */}
+        {/* Task Filters Component */}
+        <TaskFilters
+          filter={filter}
+          activeCount={activeCount}
+          onSetFilter={setFilter}
+        />
       </div>
     </div>
   )
