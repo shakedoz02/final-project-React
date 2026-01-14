@@ -23,30 +23,30 @@
 ## 3. Component Implementation
 
 ### 3.1 TaskInput Component
-- [ ] Create `TaskInput.jsx` component
-- [ ] Implement controlled input field
-- [ ] Add local state management for input value
-- [ ] Validate non-empty input submissions
-- [ ] Implement `onAddTask(text)` callback integration
-- [ ] Add inline validation feedback for empty submissions
+- [x] Create `TaskInput.jsx` component
+- [x] Implement controlled input field
+- [x] Add local state management for input value
+- [x] Validate non-empty input submissions
+- [x] Implement `onAddTask(text)` callback integration
+- [x] Add inline validation feedback for empty submissions
 
 ### 3.2 TaskList Component
-- [ ] Create `TaskList.jsx` component
-- [ ] Receive filtered tasks array as prop
-- [ ] Map tasks to `TaskItem` components
-- [ ] Display fallback message when list is empty
-- [ ] Pass through CRUD callbacks to TaskItem
+- [x] Create `TaskList.jsx` component
+- [x] Receive filtered tasks array as prop
+- [x] Map tasks to `TaskItem` components
+- [x] Display fallback message when list is empty
+- [x] Pass through CRUD callbacks to TaskItem
 
 ### 3.3 TaskItem Component
-- [ ] Create `TaskItem.jsx` component
-- [ ] Display task text and completion state
-- [ ] Implement toggle completion functionality with `onToggle(id)`
-- [ ] Implement delete functionality with `onDelete(id)`
-- [ ] Add edit mode support
-  - [ ] Toggle between view and edit mode
-  - [ ] Save edited text with `onEdit(id, newText)`
-  - [ ] Cancel edit functionality
-- [ ] Apply visual styling for completed tasks (line-through/dimmed)
+- [x] Create `TaskItem.jsx` component
+- [x] Display task text and completion state
+- [x] Implement toggle completion functionality with `onToggle(id)`
+- [x] Implement delete functionality with `onDelete(id)`
+- [x] Add edit mode support
+  - [x] Toggle between view and edit mode
+  - [x] Save edited text with `onEdit(id, newText)`
+  - [x] Cancel edit functionality
+- [x] Apply visual styling for completed tasks (line-through/dimmed)
 
 ### 3.4 TaskFilters Component
 - [ ] Create `TaskFilters.jsx` component

@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import TaskInput from './components/TaskInput'
+import TaskList from './components/TaskList'
 import './App.css'
 
 /**
@@ -7,7 +9,7 @@ import './App.css'
  */
 function App() {
   // ========== STATE MANAGEMENT ==========
-  
+
   /**
    * Tasks state - array of task objects
    * Schema: { id: string, text: string, completed: boolean }
@@ -24,7 +26,7 @@ function App() {
   const [filter, setFilter] = useState('all');
 
   // ========== LOCALSTORAGE SYNCHRONIZATION ==========
-  
+
   /**
    * Load tasks from localStorage on startup
    * Validates data and handles errors gracefully
@@ -32,13 +34,13 @@ function App() {
   function loadTasksFromStorage() {
     try {
       const storedTasks = localStorage.getItem('tasks');
-      
+
       if (!storedTasks) {
         return []; // No data, return empty array
       }
 
       const parsed = JSON.parse(storedTasks);
-      
+
       // Validate that it's an array
       if (!Array.isArray(parsed)) {
         console.warn('Invalid tasks data in localStorage: not an array');
@@ -46,7 +48,7 @@ function App() {
       }
 
       // Validate each task has required properties
-      const isValid = parsed.every(task => 
+      const isValid = parsed.every(task =>
         task &&
         typeof task.id === 'string' &&
         typeof task.text === 'string' &&
@@ -81,7 +83,7 @@ function App() {
   }, [tasks]);
 
   // ========== DERIVED VALUES ==========
-  
+
   /**
    * Calculate number of active (incomplete) tasks
    */
@@ -97,7 +99,7 @@ function App() {
   });
 
   // ========== CRUD OPERATIONS ==========
-  
+
   /**
    * Generate unique ID for new tasks
    * Uses crypto.randomUUID() if available, otherwise fallback
@@ -157,22 +159,30 @@ function App() {
   }
 
   // ========== RENDER ==========
-  
+
   return (
     <div className="app">
       <h1>Task Manager</h1>
-      
+
       <div className="app-container">
-        <p>State Management Implemented</p>
-        <p>Tasks: {tasks.length}</p>
-        <p>Active: {activeCount}</p>
-        <p>Filter: {filter}</p>
-        <p>Visible: {visibleTasks.length}</p>
-        
-        {/* Components will be integrated here */}
-        {/* <TaskInput onAddTask={addTask} /> */}
+        {/* Task Input Component */}
+        <TaskInput onAddTask={addTask} />
+
+        {/* Debug Info */}
+        <div className="debug-info">
+          <p>Tasks: {tasks.length} | Active: {activeCount} | Filter: {filter} | Visible: {visibleTasks.length}</p>
+        </div>
+
+        {/* Task List Component */}
+        <TaskList
+          tasks={visibleTasks}
+          onToggle={toggleTask}
+          onDelete={deleteTask}
+          onEdit={editTask}
+        />
+
+        {/* Component to be integrated next */}
         {/* <TaskFilters filter={filter} activeCount={activeCount} onSetFilter={setFilter} /> */}
-        {/* <TaskList tasks={visibleTasks} onToggle={toggleTask} onDelete={deleteTask} onEdit={editTask} /> */}
       </div>
     </div>
   )
