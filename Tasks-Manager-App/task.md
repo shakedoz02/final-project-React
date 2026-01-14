@@ -7,18 +7,18 @@
 - [x] Create PRD.md documentation
 
 ## 2. Core State Management & Data Layer
-- [ ] Define task data model schema (id, text, completed)
-- [ ] Implement state structure in `App.jsx`
-  - [ ] `tasks` state array
-  - [ ] `filter` state ('all' | 'active' | 'completed')
-- [ ] Implement localStorage synchronization
-  - [ ] Load tasks from localStorage on app startup
-  - [ ] Validate and parse localStorage data with error handling
-  - [ ] Save tasks to localStorage on every state change
-  - [ ] Handle edge cases (invalid JSON, quota exceeded)
-- [ ] Implement derived values computation
-  - [ ] Calculate `activeCount` (tasks with completed === false)
-  - [ ] Calculate `visibleTasks` based on current filter
+- [x] Define task data model schema (id, text, completed)
+- [x] Implement state structure in `App.jsx`
+  - [x] `tasks` state array
+  - [x] `filter` state ('all' | 'active' | 'completed')
+- [x] Implement localStorage synchronization
+  - [x] Load tasks from localStorage on app startup
+  - [x] Validate and parse localStorage data with error handling
+  - [x] Save tasks to localStorage on every state change
+  - [x] Handle edge cases (invalid JSON, quota exceeded)
+- [x] Implement derived values computation
+  - [x] Calculate `activeCount` (tasks with completed === false)
+  - [x] Calculate `visibleTasks` based on current filter
 
 ## 3. Component Implementation
 
@@ -56,16 +56,16 @@
 - [ ] Implement `onSetFilter(filter)` callback
 
 ## 4. App Integration
-- [ ] Wire up CRUD operations in `App.jsx`
-  - [ ] `addTask(text)` - generate unique ID, add to tasks
-  - [ ] `toggleTask(id)` - flip completed flag
-  - [ ] `editTask(id, newText)` - update task text
-  - [ ] `deleteTask(id)` - remove from tasks array
-- [ ] Implement filter logic
-  - [ ] `setFilter(filter)` - update filter state
-  - [ ] Filter tasks based on current filter value
+- [x] Wire up CRUD operations in `App.jsx`
+  - [x] `addTask(text)` - generate unique ID, add to tasks
+  - [x] `toggleTask(id)` - flip completed flag
+  - [x] `editTask(id, newText)` - update task text
+  - [x] `deleteTask(id)` - remove from tasks array
+- [x] Implement filter logic
+  - [x] `setFilter(filter)` - update filter state
+  - [x] Filter tasks based on current filter value
 - [ ] Pass callbacks as props to child components
-- [ ] Ensure localStorage sync on all state changes
+- [x] Ensure localStorage sync on all state changes
 
 ## 5. Styling & UI/UX
 - [ ] Create global styles in `App.css` or `index.css`
@@ -91,10 +91,10 @@
   - [ ] Keyboard navigation support
 
 ## 6. ID Generation
-- [ ] Implement reliable unique ID generation
-  - [ ] Use `crypto.randomUUID()` if available
-  - [ ] Fallback to timestamp + random suffix
-  - [ ] Ensure no ID collisions
+- [x] Implement reliable unique ID generation
+  - [x] Use `crypto.randomUUID()` if available
+  - [x] Fallback to timestamp + random suffix
+  - [x] Ensure no ID collisions
 
 ## 7. Testing & Quality Assurance
 - [ ] Manual testing - Add task functionality
