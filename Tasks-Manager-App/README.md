@@ -172,6 +172,43 @@ See `walkthrough.md` in the artifacts directory for detailed test results.
 - **localStorage** - Client-side data persistence
 - **crypto.randomUUID()** - Unique ID generation
 
+## ⚠️ Known Limitations and Bugs
+
+### Browser-Based Storage
+- **localStorage Dependency**: All tasks are stored locally in your browser's localStorage. This means:
+  - Tasks are specific to the browser and device you're using
+  - Clearing browser data will delete all tasks
+  - Tasks cannot be accessed from different browsers or devices
+  - Storage is limited to ~5-10MB depending on the browser
+
+### No User Authentication
+- **No User Accounts**: The application does not have user authentication or account system
+  - Anyone with access to your device can view/modify tasks
+  - No login or password protection
+  - Not suitable for multi-user environments
+
+### No Cloud Synchronization
+- **No Cloud Sync**: Tasks are not synchronized to the cloud
+  - No backup or recovery mechanism
+  - Tasks cannot be shared across devices
+  - No collaborative features
+  - Data loss is permanent if browser data is cleared
+
+### Recommended Use Cases
+This application is best suited for:
+- Personal task management on a single device
+- Local development and testing
+- Learning React and localStorage concepts
+- Quick prototyping and demonstrations
+
+### Future Enhancements (Not Implemented)
+Potential improvements that could address these limitations:
+- Backend API integration for cloud storage
+- User authentication system
+- Multi-device synchronization
+- Data export/import functionality
+- Browser extension for cross-browser support
+
 ## 📝 License
 
 This project is open source and available under the MIT License.
