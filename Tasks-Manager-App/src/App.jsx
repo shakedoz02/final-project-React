@@ -91,6 +91,11 @@ function App() {
   const activeCount = tasks.filter(task => !task.completed).length;
 
   /**
+   * Calculate number of completed tasks
+   */
+  const completedCount = tasks.filter(task => task.completed).length;
+
+  /**
    * Filter tasks based on current filter value
    */
   const visibleTasks = tasks.filter(task => {
@@ -159,6 +164,14 @@ function App() {
     setTasks(prevTasks => prevTasks.filter(task => task.id !== id));
   }
 
+  /**
+   * Clear all completed tasks
+   * Removes all tasks where completed === true
+   */
+  function clearCompleted() {
+    setTasks(prevTasks => prevTasks.filter(task => !task.completed));
+  }
+
   // ========== RENDER ==========
 
   return (
@@ -182,7 +195,9 @@ function App() {
         <TaskFilters
           filter={filter}
           activeCount={activeCount}
+          completedCount={completedCount}
           onSetFilter={setFilter}
+          onClearCompleted={clearCompleted}
         />
       </div>
     </div>

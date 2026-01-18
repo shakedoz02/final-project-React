@@ -55,6 +55,25 @@
 - [x] Display active tasks counter ("X tasks remaining")
 - [x] Implement `onSetFilter(filter)` callback
 
+### 3.5 Clear Completed Feature (New Enhancement)
+- [x] Add "Clear Completed" button to TaskFilters component
+  - [x] Button should only be visible when there is at least one completed task
+  - [x] Add appropriate styling (secondary button style)
+  - [x] Include hover and focus states for accessibility
+- [x] Implement `clearCompleted()` function in `App.jsx`
+  - [x] Filter out all tasks where `completed === true`
+  - [x] Update tasks state with only active tasks
+  - [x] Ensure localStorage sync after clearing
+- [x] Wire up callback from App to TaskFilters
+  - [x] Pass `onClearCompleted` prop to TaskFilters
+  - [x] Pass `completedCount` or check logic for button visibility
+- [x] Test Clear Completed functionality
+  - [x] Verify button only shows when completed tasks exist
+  - [x] Verify button removes all completed tasks
+  - [x] Verify active tasks remain untouched
+  - [x] Verify localStorage updates correctly
+  - [x] Verify UI updates immediately
+
 ## 4. App Integration
 - [x] Wire up CRUD operations in `App.jsx`
   - [x] `addTask(text)` - generate unique ID, add to tasks

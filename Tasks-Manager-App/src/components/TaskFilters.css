@@ -92,6 +92,44 @@
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.3);
 }
 
+/* Clear Completed Button */
+.clear-completed-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ef4444;
+  background: transparent;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.clear-completed-btn:hover {
+  color: #ffffff;
+  background-color: #ef4444;
+  border-color: #ef4444;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+
+.clear-completed-btn:active {
+  transform: scale(0.98);
+}
+
+.clear-completed-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3);
+}
+
+.clear-completed-btn:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+.clear-completed-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3);
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 640px) {
   .task-filters {

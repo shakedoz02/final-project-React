@@ -26,6 +26,7 @@ This document describes the product requirements for a simple Task Manager appli
 - As a user, I can edit the text of a task.
 - As a user, I can delete a task.
 - As a user, I can filter the shown tasks by All, Active, or Completed, and see how many active tasks remain.
+- **As a user, I can clear all completed tasks at once to quickly clean up my task list.**
 
 ---
 
@@ -56,6 +57,9 @@ The app will be composed of the following components (minimum):
   - Render filter buttons (All, Active, Completed) with visual highlight for the active filter
   - Show active tasks count
   - Call `onSetFilter(filter)` when filter changes
+  - **Render a "Clear Completed" button that removes all completed tasks from the list**
+  - **The button should only be visible when there is at least one completed task**
+  - **Call `onClearCompleted()` when the button is clicked**
 
 ---
 

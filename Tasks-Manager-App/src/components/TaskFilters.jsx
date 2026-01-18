@@ -7,14 +7,23 @@ import './TaskFilters.css';
  * Props:
  * - filter: 'all' | 'active' | 'completed' - Current filter value
  * - activeCount: number - Number of active (incomplete) tasks
+ * - completedCount: number - Number of completed tasks
  * - onSetFilter: (filter: string) => void - Callback to change filter
+ * - onClearCompleted: () => void - Callback to clear all completed tasks
  */
-function TaskFilters({ filter, activeCount, onSetFilter }) {
+function TaskFilters({ filter, activeCount, completedCount, onSetFilter, onClearCompleted }) {
     /**
      * Handle filter button click
      */
     function handleFilterClick(newFilter) {
         onSetFilter(newFilter);
+    }
+
+    /**
+     * Handle clear completed button click
+     */
+    function handleClearCompleted() {
+        onClearCompleted();
     }
 
     return (
@@ -56,6 +65,17 @@ function TaskFilters({ filter, activeCount, onSetFilter }) {
                     Completed
                 </button>
             </div>
+
+            {/* Clear Completed button - only visible when there are completed tasks */}
+            {completedCount > 0 && (
+                <button
+                    className="clear-completed-btn"
+                    onClick={handleClearCompleted}
+                    aria-label={`Clear ${completedCount} completed ${completedCount === 1 ? 'task' : 'tasks'}`}
+                >
+                    Clear Completed
+                </button>
+            )}
         </div>
     );
 }
